@@ -1,10 +1,11 @@
-// src/App.jsx
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
-import Footer from "./components/Footer";
+import Journal from "./pages/Journal";
+import Article from "./pages/Article";
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/journal" element={<Journal />} />
+            <Route path="/journal/:id" element={<Article />} />
           </Routes>
         </main>
         <Footer />
@@ -23,5 +26,4 @@ function App() {
     </Router>
   );
 }
-
 export default App;
